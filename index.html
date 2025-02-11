@@ -11,12 +11,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f0f4f8;
         }
         header {
-            background-color: #4a90e2;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        header:hover {
+            background-color: #3b7cc4;
         }
         header h1 {
             margin: 0;
@@ -26,23 +31,44 @@
             margin: 0.5rem 0 1rem;
         }
         header .cta {
-            background-color: #f5a623;
-            color: white;
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
             padding: 0.8rem 1.5rem;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        header .cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
             padding: 1rem;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color:#ff7eb3;
+            text-decoration: underline;
+            cursor: pointer;
         }
         section {
             padding: 2rem 1rem;
@@ -50,9 +76,15 @@
             margin: 0 auto;
         }
         .highlights {
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             padding: 2rem;
             margin-top: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .highlights:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .highlights h2 {
             margin-bottom: 1rem;
@@ -70,17 +102,37 @@
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+        .highlights .cta {
+            margin-top: 1rem;
+            display: inline-block;
         }
-        footer a {
-            color: #f5a623;
-            text-decoration: none;
+       
+        .sec{
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
         }
+        .sec:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #000; 
+        }
+        #about{
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+        }
+       
+        
     </style>
 </head>
 <body>
@@ -95,40 +147,43 @@
     <nav>
         <a href="#about">About Us</a>
         <a href="#courses">Courses</a>
-        <!-- <a href="#resources">Free Resources</a> -->
         <a href="#contact">Contact Us</a>
     </nav>
 
     <!-- About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We aim to make AI accessible to everyone. Our 2-hour crash course is designed for beginners who want to explore the world of Artificial Intelligence and get hands-on experience with real-world applications.</p>
-    </section>
+    <div class="sec">
+        <section id="about">
+            <h2><u>About Us</u></h2>
+            <p>We aim to make AI accessible to everyone. Our 2-hour crash course is designed for beginners who want to explore the world of Artificial Intelligence and get hands-on experience with real-world applications.</p>
+        </section>
+    </div>
+    
 
     <!-- Course Highlights Section -->
-    <section id="courses" class="highlights">
-        <h2>Course Highlights</h2>
-        <ul>
-            <li><span>Duration:</span> 2 Hours</li>
-            <li><span>Hands-On Mini Project:</span> Build a simple AI model.</li>
-            <li><span>Outcome:</span> Receive a free placement preparation guide, including ATS resume templates, tips on how to prepare your resume, aptitude resources, coding guides, and more.</li>
-            <li><span>Topics:</span> Introduction to AI, Basics of Machine Learning and Deep Learning., Real-World Applications of AI (Chatbots, Recommendations, etc.).</li>
-        </ul>
-        <a href="enroll.html" class="cta">Enroll Now</a>
-    </section>
-
-    <!-- Free Resources Section -->
-    <!-- <section id="resources">
-        <h2>Free Resources</h2>
-        <p>Access guides, cheat sheets, and beginner-friendly tutorials to help you kickstart your AI journey.</p>
-    </section> -->
-
+     <div class="sec">
+        <section id="courses" class="highlights">
+            <h2><u>Course Highlights</u></h2>
+            <ul>
+                <li><span>Duration:</span> 2 Hours</li>
+                <li><span>Hands-On Mini Project:</span> Build a simple AI model.</li>
+                <li><span>Outcome:</span> Receive a free placement preparation guide, including ATS resume templates, tips on how to prepare your resume, aptitude resources, coding guides, and more.</li>
+                <li><span>Topics:</span> Introduction to AI, Basics of Machine Learning and Deep Learning., Real-World Applications of AI (Chatbots, Recommendations, etc.).</li>
+            </ul>
+            <a href="enroll.html" class="cta">Enroll Now</a>
+        </section>
+    
+        </div>
+    
     <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us at <a href="mailto:learnaisimple@gmail.com">learnaisimple</a></p>
-    </section>
+     <div class="sec">
+        <section id="contact">
+            <h2><u>Contact Us</u></h2>
+            <p>Have questions? Reach out to us at <a href="mailto:learnaisimple@gmail.com">learnaisimple</a></p>
+        </section>
+        </div>
+    
 
     <!-- Footer -->
+    
 </body>
 </html>
